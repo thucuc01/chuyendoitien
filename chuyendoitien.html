@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+        <th>Amount</th>
+        </td>
+        <td>
+        <th>From Currency</th>
+        </td>
+        <td>
+        <th>To Currency</th>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="text" id="Nhaptien" name="number"/>
+        </td>
+        <td></td>
+        <td>
+            <select id="from">
+                <option value="23000">VND</option>
+                <option value="1">USD</option>
+            </select>
+        </td>
+        <td></td>
+        <td>
+            <select id="to">
+                <option value="23000">VND</option>
+                <option value="1">USD</option>
+            </select>
+        </td>
+        <td></td>
+        <td>
+            <button onclick="Chuyentien()">Convert</button>
+        </td>
+    </tr>
+</table>
+<p id = "Ket qua"></p>
+</body>
+</html>
+<script>
+    function Chuyentien() {
+
+        let a = document.getElementById("Nhaptien").value;
+        let f = document.getElementById("from").value;
+        let t = document.getElementById("to").value;
+        document.getElementById("Ket qua").innerText = "Tien =" + (a*t)/f;
+    }
+</script>
