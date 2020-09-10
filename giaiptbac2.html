@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="a" type="text" name="number">
+X2 +
+<input id="b" type="text" name="number">
+X +
+<input id="c" type="text" name="number">
+=0
+<br>
+<button onclick="Ketqua()">Ket qua</button>
+<p id="nghiem"></p>
+</body>
+</html>
+<script>
+    function Ketqua() {
+        let a= parseInt(document.getElementById("a").value);
+        let b= parseInt(document.getElementById("b").value);
+        let c= parseInt(document.getElementById("c").value);
+        let delta= b*b-4*a*c;
+        let x1 = -b/(2*a);
+        let x2 = -(b+ Math.sqrt(delta))/(2*a);
+        let x3=-(b-Math.sqrt(delta))/(2*a);
+        if (a==0) {
+            document.getElementById("nghiem").innerHTML=("Khong phai pt bac 2");
+        }
+        else { if (delta==0){
+            document.getElementById("nghiem").innerHTML="Ket qua= " + x1;
+        }
+        else { if(delta < 0) {
+            document.getElementById("nghiem").innerHTML = "phuong trinh vo nghiem";
+        }
+        else{
+            document.getElementById("nghiem").innerHTML="nghiem 1:" + x2 + ' Nghiem 2' + x3;
+
+        }
+        }
+
+        }
+
+    }
+</script>
